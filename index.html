@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhoLook | Define Your Aura</title>
     <style>
-      /* CSS 로딩 전 하얀 화면 방지 */
-      html, body { background-color: #000000 !important; color: white; margin: 0; }
-      #root:empty { display: none; }
-    </style>
+    /* 배경은 즉시 검정, 글자는 로딩 전까지 투명하게 숨김 */
+    html, body { 
+      background-color: #000000 !important; 
+      margin: 0; 
+      padding: 0;
+    }
+    #root {
+      opacity: 0;
+    }
+    /* 내용이 들어오면 0.3초 만에 스르륵 나타남 */
+    #root:not(:empty) {
+      opacity: 1;
+      transition: opacity 0.3s ease-in;
+    }
+  </style>
     <script type="importmap">
 {
   "imports": {
