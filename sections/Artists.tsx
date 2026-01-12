@@ -20,10 +20,14 @@ const Artists: React.FC = () => {
         {ARTISTS.map((artist, index) => (
           <motion.div
             key={artist.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20, filter: "blur(12px)", scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)", scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
+            transition={{
+              delay: index * 0.15,
+              duration: 1,
+              ease: [0.16, 1, 0.3, 1]
+            }}
             className="group relative cursor-pointer"
           >
             {/* [수정] 이미지 틀 높이를 h-[480px]로 고정하여 하단 이름 위치를 일직선으로 정렬 */}
