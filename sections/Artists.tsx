@@ -40,7 +40,7 @@ const Artists: React.FC = () => {
             </div>
 
             {/* [수정] 녹색 세로선 밸런스: py-1을 추가하여 텍스트 높이에 딱 맞게 네온 바 길이 조정 */}
-            <div className="border-l-2 border-neon-green pl-4 py-1 flex flex-col justify-center min-h-[110px]">
+            <div className="border-l-2 border-neon-green pl-4 py-0 flex flex-col justify-start h-fit mt-4">
               <h3 className="text-2xl font-serif text-white leading-tight">{artist.name}</h3>
               <p className="text-neon-green text-sm uppercase tracking-wider mt-1 mb-2">{artist.role}</p>
               <p className="text-gray-400 text-sm leading-relaxed">{artist.specialty}</p>

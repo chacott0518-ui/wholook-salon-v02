@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WhoLook | Define Your Aura</title>
-    <meta property="og:title" content="WhoLook Seongsu" />
-    <meta property="og:image" content="https://picsum.photos/1200/630" />
-  <script type="importmap">
+    <style>
+      /* CSS 로딩 전 하얀 화면 방지 */
+      html, body { background-color: #000000 !important; color: white; margin: 0; }
+      #root:empty { display: none; }
+    </style>
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.26.1",
-    "react-helmet-async": "https://esm.sh/react-helmet-async@^2.0.5"
+    "react": "https://esm.sh/react@19.2.3",
+    "react-dom": "https://esm.sh/react-dom@19.2.3/",
+    "react/": "https://esm.sh/react@19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@0.562.0",
+    "framer-motion": "https://esm.sh/framer-motion@12.26.1",
+    "react-helmet-async": "https://esm.sh/react-helmet-async@2.0.5",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
-</head>
-  <body>
+  </head>
+  <body style="background-color: #000000;">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>
