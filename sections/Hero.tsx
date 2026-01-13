@@ -24,13 +24,9 @@ const floatingImages = [
   },
   {
     src: "https://i.pinimg.com/736x/7e/29/84/7e2984737122798a0b6ee1f1f7d95f33.jpg",
-    // 1. 모바일: w-36으로 줄여서 버튼 옆 빨간 박스 위치에 안착
-    // 2. PC(md): w-[380px]로 줄여서 'SALON' 글자 아래 배경으로 배치
-    // 3. z-0으로 설정하여 배경 위로 노출 (글자/버튼보다는 뒤)
     className: "bottom-[8%] right-[2%] md:bottom-[5%] md:right-[5%] w-36 md:w-[380px] aspect-[2/3] z-0 rotate-[4deg] opacity-80 shadow-none",
     delay: 1.6,
-  },
-  },
+  }
 ];
 const Hero: React.FC = () => {
   return (
