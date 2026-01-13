@@ -1,34 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const floatingImages = [
   {
-    src: "https://i.pinimg.com/1200x/a9/ef/d1/a9efd1d51c062e7f29bd4929560a7255.jpg", // 1번 (좌측 상단)
-    className: "top-[12%] left-[8%] md:left-[15%] w-44 md:w-80 aspect-[16/10] z-20 shadow-2xl",
+    src: "https://i.pinimg.com/736x/0f/32/bc/0f32bcd8a7eabbf3ae4544c3cfa241dc.jpg",
+    className: "top-[10%] left-[5%] md:top-[12%] md:left-[10%] w-32 md:w-80 aspect-[3/4] z-20 shadow-2xl",
     delay: 0.8,
   },
   {
-    src: "https://i.pinimg.com/736x/98/4c/32/984c32dd82e5492910282ddbe0b9070b.jpg", // 2번 (우측 상단)
-    className: "top-[8%] right-[8%] md:right-[18%] w-32 md:w-56 aspect-square z-10 rotate-3",
+    src: "https://i.pinimg.com/736x/98/4c/32/984c32dd82e5492910282ddbe0b9070b.jpg",
+    // top-[5%]를 top-[20%]로 수정하여 모바일에서 아래로 내림
+    className: "top-[20%] right-[5%] md:top-[8%] md:right-[12%] w-28 md:w-56 aspect-square z-10 rotate-3",
     delay: 1.0,
   },
   {
-    src: "https://i.pinimg.com/736x/cb/6e/0e/cb6e0e9234d879cb482e96fde1ec4c29.jpg", // 3번 (좌측 하단)
-    className: "bottom-[22%] left-[5%] md:left-[10%] w-36 md:w-60 aspect-[3/4] z-10 -rotate-3",
+    src: "https://i.pinimg.com/736x/cb/6e/0e/cb6e0e9234d879cb482e96fde1ec4c29.jpg",
+    className: "bottom-[20%] left-[2%] md:bottom-[20%] md:left-[8%] w-28 md:w-60 aspect-[3/4] z-10 -rotate-3",
     delay: 1.2,
   },
   {
-    src: "https://i.pinimg.com/736x/80/f6/52/80f652d33c9933d1e5213a94128e327f.jpg", // 4번 (우측 하단)
-    className: "bottom-[15%] right-[5%] md:right-[15%] w-40 md:w-72 aspect-video z-30 shadow-neon",
+    src: "https://i.pinimg.com/1200x/0e/eb/8c/0eeb8c7cbd7e7eec34cc44f06d354a4c.jpg",
+    className: "bottom-[5%] left-[25%] md:bottom-[18%] md:left-[30%] w-28 md:w-60 aspect-[3/4] z-8 shadow-lg",
     delay: 1.4,
   },
   {
-    src: "https://i.pinimg.com/1200x/0e/eb/8c/0eeb8c7cbd7e7eec34cc44f06d354a4c.jpg", // 5번 (신규: 3번과 겹치며 여백 채움)
-    className: "bottom-[2%] left-[15%] md:left-[22%] w-40 md:w-72 aspect-[4/5] z-0 rotate-6 opacity-80 shadow-2xl",
+    src: "https://i.pinimg.com/736x/7e/29/84/7e2984737122798a0b6ee1f1f7d95f33.jpg",
+    // 1. 모바일: w-36으로 줄여서 버튼 옆 빨간 박스 위치에 안착
+    // 2. PC(md): w-[380px]로 줄여서 'SALON' 글자 아래 배경으로 배치
+    // 3. z-0으로 설정하여 배경 위로 노출 (글자/버튼보다는 뒤)
+    className: "bottom-[8%] right-[2%] md:bottom-[5%] md:right-[5%] w-36 md:w-[380px] aspect-[2/3] z-0 rotate-[4deg] opacity-80 shadow-none",
     delay: 1.6,
-  }
+  },
+  },
 ];
-
 const Hero: React.FC = () => {
   return (
     <div className="relative w-full min-h-[100dvh] bg-black flex flex-col justify-center items-center overflow-hidden">
@@ -49,8 +52,8 @@ const Hero: React.FC = () => {
         >
           <img
             src={img.src}
-            alt="Aura Style"
-            className="w-full h-full object-cover rounded-lg shadow-[0_0_30px_rgba(57,255,20,0.1)] opacity-60 md:opacity-80"
+            className="w-full h-full object-cover object-top rounded-lg"
+            alt="Hair Style"
           />
         </motion.div>
       ))}
